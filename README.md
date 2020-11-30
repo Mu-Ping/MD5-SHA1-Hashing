@@ -9,5 +9,5 @@
   * 簡介與虛擬碼 - [維基百科](https://reurl.cc/D6kaKR)
   * 運作原理 - [雜湊與亂數演算法](https://reurl.cc/Gry7NZ)
  
->:warning:若網址失效可在「MD5_SHA1相關網站」找到網頁原始碼
+>:warning:若網址失效可在「MD5_SHA1相關網站」找到網頁pdf檔
 ## SHA簡介
