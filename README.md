@@ -1,4 +1,4 @@
-# MD5_SHA1-File-Integrity-check
+# MD5/SHA1-File Integrity Checking
 ## MD5簡介
 > 全名為：Message-Digest Algorithm，5表示第五代
 * 一種被廣泛使用的密碼雜湊函式，可以產生出一個128位元（16位元組）的雜湊值（hash value），用於確保資訊傳輸完整一致。
