@@ -60,6 +60,7 @@ def delete():
     record2_method.set("")
     record2_file.set("")
     record2_hash.set("")
+    
 def verif():
     if(record1_method.get()!=record2_method.get()):
         messagebox.showwarning("警告","請使用同個加密方法")
