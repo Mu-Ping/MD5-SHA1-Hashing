@@ -21,7 +21,6 @@ def selectpath():
 
 def encryption():
     global count
-    
     if(data_combobox.current()==0):
         encryption = hashlib.md5()
     elif(data_combobox.current()==1):
@@ -38,7 +37,6 @@ def encryption():
             with open(fullpath, "rb") as f:
                 buf = f.read()
                 encryption.update(buf)
-
     count+=1
     if(count==1):
         record1_method.set(file[data_combobox.current()])
@@ -71,12 +69,13 @@ def verif():
             messagebox.showinfo("結果","完整性完好")    
         else:
             messagebox.showwarning("警告","完整性遭破壞")
+            
 window = tk.Tk()
 window.geometry("650x520")
 window.resizable(False, False)
 window.title("MD5/SHA 檔案完整性驗證器")
-count = 0
 
+count = 0
 file=["MD5", "SHA"]
 setting = tk.Frame(window)
 setting.grid(row=0, column=0, columnspan=4, padx=10)
@@ -123,7 +122,6 @@ tk.Label(result_2, font=("微軟正黑體", 10, "bold"), text="檔案/資料夾�
 tk.Label(result_2, font=("微軟正黑體", 10, "bold"), textvariable=record2_file).grid(row=2, column=1, sticky=tk.W, pady=2)
 tk.Label(result_2, font=("微軟正黑體", 10, "bold"), text="雜湊值：").grid(row=3, column=0, sticky=tk.W, pady=1)
 tk.Label(result_2, font=("微軟正黑體", 10, "bold"), textvariable=record2_hash).grid(row=3, column=1, sticky=tk.W, pady=2)
-
 
 verification = tk.Frame(window)
 verification.grid(row=3, column=0, sticky=tk.NW, pady=10, padx=10)
