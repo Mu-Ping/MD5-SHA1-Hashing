@@ -20,3 +20,8 @@
   * 簡介與虛擬碼 - [SHA-1 - 維基百科](https://reurl.cc/EzlqRa)
   * 運作原理 - [雜湊與亂數演算法](https://reurl.cc/Gry7NZ)
 >:warning:若網址失效可在「MD5_SHA1相關網站」找到網頁pdf檔
+## 程式範例圖
+![](https://i.imgur.com/ogUOEyt.png)
+
+@author： [Mu-Ping](https://github.com/Mu-Ping)  
+@e-mail： k0326jim@gmail.com
