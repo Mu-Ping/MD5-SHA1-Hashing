@@ -61,7 +61,7 @@ def delete():
     
 def verif():
     if(record1_method.get()!=record2_method.get()):
-        messagebox.showwarning("警告","請使用同個加密方法")
+        messagebox.showwarning("警告","請使用同個雜湊方法")
     elif(record1_file.get()!=record2_file.get()):
         messagebox.showwarning("警告","請使用相同檔案驗證")
     else:
@@ -73,25 +73,25 @@ def verif():
 window = tk.Tk()
 window.geometry("650x520")
 window.resizable(False, False)
-window.title("MD5/SHA 檔案完整性驗證器")
+window.title("MD5/SHA1 檔案完整性驗證器")
 
 count = 0
-file=["MD5", "SHA"]
+file=["MD5", "SHA1"]
 setting = tk.Frame(window)
 setting.grid(row=0, column=0, columnspan=4, padx=10)
-tk.Label(setting, font=("微軟正黑體", 12, "bold"), text="選擇加密方法").grid(row=0, column=0, columnspan=3, sticky=tk.W, pady=4)
+tk.Label(setting, font=("微軟正黑體", 12, "bold"), text="選擇雜湊方法").grid(row=0, column=0, columnspan=3, sticky=tk.W, pady=4)
 data_combobox = ttk.Combobox(setting, value=file, state="readonly") #readonly為只可讀狀態
 data_combobox.current(0)
 data_combobox.grid(row=1, column=0, columnspan=3, sticky=tk.W, pady=1)
 convergence = tk.IntVar() #判斷加密條件
 path = tk.StringVar()
-tk.Label(setting, font=("微軟正黑體", 12, "bold"), text="選擇加密目標").grid(row=2, column=0, columnspan=3, sticky=tk.W, pady=4)
+tk.Label(setting, font=("微軟正黑體", 12, "bold"), text="選擇雜湊目標").grid(row=2, column=0, columnspan=3, sticky=tk.W, pady=4)
 tk.Radiobutton(setting, font=("微軟正黑體", 10, "bold"), text="檔案", variable=convergence, value=0).grid(row=3, columnspan=3, sticky=tk.W)
 tk.Radiobutton(setting, font=("微軟正黑體", 10, "bold"), text="資料夾", variable=convergence, value=1).grid(row=4, columnspan=3, sticky=tk.W)
 tk.Label(setting, font=("微軟正黑體", 12, "bold"), text="目標路徑").grid(row=5, column=0, sticky=tk.W)
 tk.Entry(setting, width=80, textvariable=path).grid(row=6, column=0, columnspan=10, sticky=tk.W)
 tk.Button(setting, text='路徑選擇', command=selectpath).grid(row=6, column=10, sticky=tk.W, padx=2)
-start = tk.Button(setting, text='開始加密', command=encryption)
+start = tk.Button(setting, text='開始雜湊', command=encryption)
 start.grid(row=7, column=0, sticky=tk.W, padx=2)
 tk.Button(setting, text='清除紀錄', command=delete).grid(row=7, column=1, sticky=tk.W, padx=2)
 
@@ -102,7 +102,7 @@ record1_file = tk.StringVar()
 record1_hash = tk.StringVar()
 
 tk.Label(result_1, font=("微軟正黑體", 12, "bold"), text="紀錄一").grid(row=0, column=0, sticky=tk.W, pady=2)
-tk.Label(result_1, font=("微軟正黑體", 10, "bold"), text="加密方法：").grid(row=1, column=0, sticky=tk.W, pady=1)
+tk.Label(result_1, font=("微軟正黑體", 10, "bold"), text="雜湊方法：").grid(row=1, column=0, sticky=tk.W, pady=1)
 tk.Label(result_1, font=("微軟正黑體", 10, "bold"), textvariable=record1_method).grid(row=1, column=1, sticky=tk.W, pady=2)
 tk.Label(result_1, font=("微軟正黑體", 10, "bold"), text="檔案/資料夾：").grid(row=2, column=0, sticky=tk.W, pady=1)
 tk.Label(result_1, font=("微軟正黑體", 10, "bold"), textvariable=record1_file).grid(row=2, column=1, sticky=tk.W, pady=2)
@@ -116,7 +116,7 @@ record2_file = tk.StringVar()
 record2_hash = tk.StringVar()
 
 tk.Label(result_2, font=("微軟正黑體", 12, "bold"), text="紀錄二").grid(row=0, column=0, sticky=tk.W, pady=2)
-tk.Label(result_2, font=("微軟正黑體", 10, "bold"), text="加密方法：").grid(row=1, column=0, sticky=tk.W, pady=1)
+tk.Label(result_2, font=("微軟正黑體", 10, "bold"), text="雜湊方法：").grid(row=1, column=0, sticky=tk.W, pady=1)
 tk.Label(result_2, font=("微軟正黑體", 10, "bold"), textvariable=record2_method).grid(row=1, column=1, sticky=tk.W, pady=2)
 tk.Label(result_2, font=("微軟正黑體", 10, "bold"), text="檔案/資料夾：").grid(row=2, column=0, sticky=tk.W, pady=1)
 tk.Label(result_2, font=("微軟正黑體", 10, "bold"), textvariable=record2_file).grid(row=2, column=1, sticky=tk.W, pady=2)
