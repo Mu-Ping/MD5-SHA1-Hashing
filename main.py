@@ -83,7 +83,7 @@ tk.Label(setting, font=("微軟正黑體", 12, "bold"), text="選擇雜湊方法
 data_combobox = ttk.Combobox(setting, value=file, state="readonly") #readonly為只可讀狀態
 data_combobox.current(0)
 data_combobox.grid(row=1, column=0, columnspan=3, sticky=tk.W, pady=1)
-convergence = tk.IntVar() #判斷加密條件
+convergence = tk.IntVar() #判斷雜湊條件
 path = tk.StringVar()
 tk.Label(setting, font=("微軟正黑體", 12, "bold"), text="選擇雜湊目標").grid(row=2, column=0, columnspan=3, sticky=tk.W, pady=4)
 tk.Radiobutton(setting, font=("微軟正黑體", 10, "bold"), text="檔案", variable=convergence, value=0).grid(row=3, columnspan=3, sticky=tk.W)
